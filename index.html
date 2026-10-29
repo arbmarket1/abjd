@@ -1,0 +1,260 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ar&quot; dir=&#39;rtl&#39;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+	
+    &lt;title&gt;برنامج حساب الجمل&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            box-sizing: border-box;
+            font-family: &quot;Amiri Quran&quot;,Arial,cursive,&#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #1976D2;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+			direction: rtl;
+        }
+        .container {
+            background-color: #f5f5f5;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            padding: 10px;
+			border-radius: 16px;
+        }
+		.hcontainer {
+      background-color: #f5f5f5;
+	  width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      box-sizing: border-box;
+    }
+		.custom-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    gap: 0.5rem;
+    justify-content: center;
+}
+	.nav-link.active {
+    color: #fff;
+    background-color: #0d6efd;
+}
+		.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+        h2 {
+            color: #000000;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .input-container {
+            margin-bottom: 35px;
+        }
+        input[type=&quot;text&quot;] {
+            width: 100%;
+            max-width: 320px;
+            padding: 15px 20px;
+            font-size: 22px;
+            font-weight: 600;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.1);
+            outline: none;
+            background-color: #ffffff;
+        }
+        input[type=&quot;text&quot;]:placeholder-shown {
+            direction: ltr;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #000000;
+            width: 25%;
+            height: 65px;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        th {
+            background-color: #e0e0e0;
+            color: #000000;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        th:first-child {
+            border: none;
+        }
+        td:first-child {
+            font-size: 22px;
+            font-weight: 700;
+            color: #000000;
+            background-color: #e0e0e0;
+            border-bottom: none;
+            border-left: none;
+            border-top: none;
+        }
+        .value-cell {
+            color: #2196F3;
+            font-size: 24px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;hcontainer&quot;&gt;
+&lt;header class=&quot;custom-header&quot;&gt;
+      &lt;ul class=&quot;nav-pills&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;index.html&quot; class=&quot;nav-link active&quot; aria-current=&quot;page&quot;&gt;حساب الحروف&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;sergold.html&quot; class=&quot;nav-link&quot;&gt;السر الذهبي&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;about.html&quot; class=&quot;nav-link&quot;&gt;نبذة عن التطبيق&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/header&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	&lt;div class=&quot;callout&quot;&gt;&lt;a href=&quot;https://almushaikhi.forumarabia.com/forum&quot;&gt;للمزيد تفضل بزيارة منتدى أبوأزهر المشايخي&lt;/a&gt; &lt;/div&gt; 
+&lt;/div&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+	
+    &lt;h2&gt;حساب الحروف&lt;/h2&gt;
+    
+    &lt;div class=&quot;input-container&quot;&gt;
+        &lt;!-- dir=&quot;auto&quot; flips typing alignment to right-to-left dynamically for Arabic/Hebrew --&gt;
+        &lt;input type=&quot;text&quot; id=&quot;numInput&quot; dir=&quot;auto&quot; placeholder=&quot;حي قيوم&quot; autocomplete=&quot;off&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;&lt;/th&gt;
+                &lt;th&gt;رقمي&lt;/th&gt;
+                &lt;th&gt;حرفي&lt;/th&gt;
+                &lt;th&gt;عددي&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;كبير&lt;/td&gt;
+                &lt;td class=&quot;value-cell&quot; id=&quot;cell-big-digits&quot;&gt;-&lt;/td&gt;
+                &lt;td class=&quot;value-cell&quot; id=&quot;cell-big-chars&quot;&gt;-&lt;/td&gt;
+                &lt;td class=&quot;value-cell&quot; id=&quot;cell-big-numric&quot;&gt;-&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;مرتبة&lt;/td&gt;
+                &lt;td class=&quot;value-cell&quot; id=&quot;cell-mid-digits&quot;&gt;-&lt;/td&gt;
+                
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;صغير&lt;/td&gt;
+                &lt;td class=&quot;value-cell&quot; id=&quot;cell-small-digits&quot;&gt;-&lt;/td&gt;
+                
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    // 1. GLOBAL MULTI-LANGUAGE DATABASE FOR EVERY CELL
+    // Instead of arrays, map specific characters straight to their values.
+    // This allows you to mix English, Arabic, and Hebrew completely in one place.
+    const LOOKUP_MAPS = {
+        &quot;cell-big-digits&quot;: {
+       
+            // Arabic Abjad Standard Values (أبجد هوز حطي كلمن...)
+            &#39;أ&#39;:1,&#39;إ&#39;:1, &#39;ا&#39;:1,&#39;ى&#39;:1, &#39;ب&#39;:2, &#39;ج&#39;:3, &#39;د&#39;:4, &#39;ه&#39;:5,&#39;ة&#39;:5, &#39;و&#39;:6,&#39;ؤ&#39;:1, &#39;ز&#39;:7, &#39;ح&#39;:8, &#39;ط&#39;:9, &#39;ي&#39;:10,&#39;ئ&#39;:1, &#39;ك&#39;:20, &#39;ل&#39;:30, &#39;م&#39;:40, &#39;ن&#39;:50, &#39;س&#39;:60, &#39;ع&#39;:70, &#39;ف&#39;:80, &#39;ص&#39;:90, &#39;ق&#39;:100, &#39;ر&#39;:200, &#39;ش&#39;:300, &#39;ت&#39;:400, &#39;ث&#39;:500, &#39;خ&#39;:600, &#39;ذ&#39;:700, &#39;ض&#39;:800, &#39;ظ&#39;:900, &#39;غ&#39;:1000,
+        },
+
+        &quot;cell-big-chars&quot;: {
+       
+            // Arabic Example Small/Reduced Values (Example only)
+            &#39;ا&#39;: 111,&#39;إ&#39;: 111,&#39;أ&#39;: 111,&#39;ى&#39;: 111, &#39;ب&#39;: 3, &#39;ج&#39;: 53, &#39;د&#39;: 35, &#39;ه&#39;: 6,&#39;ة&#39;: 6, &#39;و&#39;: 13,&#39;111&#39;: 13, &#39;ز&#39;: 18, &#39;ح&#39;: 9, &#39;ط&#39;: 10, &#39;ي&#39;: 11,&#39;ئ&#39;: 111, &#39;ك&#39;: 101, &#39;ل&#39;: 71, &#39;م&#39;: 90, &#39;ن&#39;: 106, &#39;س&#39;: 120, &#39;ع&#39;: 130, &#39;ف&#39;: 81, &#39;ص&#39;: 95, &#39;ق&#39;: 181, &#39;ر&#39;: 201, &#39;ش&#39;: 360, &#39;ت&#39;: 401, &#39;ث&#39;: 501, &#39;خ&#39;: 601, &#39;ذ&#39;: 731, &#39;ض&#39;: 805, &#39;ظ&#39;: 901, &#39;غ&#39;: 1060,
+          
+        },
+
+        &quot;cell-big-numric&quot;: {
+         
+            // Add custom Arabic or Hebrew configurations for this calculation method below
+			&#39;ا&#39;: 19,&#39;أ&#39;: 19,&#39;إ&#39;: 19,&#39;ى&#39;: 19, &#39;ب&#39;: 611, &#39;ج&#39;: 1036, &#39;د&#39;: 278, &#39;ه&#39;: 705,&#39;ة&#39;: 705, &#39;و&#39;: 465,&#39;ؤ&#39;: 19, &#39;ز&#39;: 137, &#39;ح&#39;: 606, &#39;ط&#39;: 535, &#39;ي&#39;: 575,&#39;ئ&#39;: 19, &#39;ك&#39;: 630, &#39;ل&#39;: 1091, &#39;م&#39;: 333, &#39;ن&#39;: 760, &#39;س&#39;: 520, &#39;ع&#39;: 192, &#39;ف&#39;: 651, &#39;ص&#39;: 590, &#39;ق&#39;: 56, &#39;ر&#39;: 511, &#39;ش&#39;: 1087, &#39;ت&#39;: 329, &#39;ث&#39;: 756, &#39;خ&#39;: 516, &#39;ذ&#39;: 188, &#39;ض&#39;: 647, &#39;ظ&#39;: 586, &#39;غ&#39;: 111,
+        },
+
+        // --- Placeholders for remaining 6 methods ---
+        &quot;cell-mid-digits&quot;:   {
+		&#39;ا&#39;: 1,&#39;أ&#39;: 1,&#39;إ&#39;: 1,&#39;ى&#39;: 1, &#39;ب&#39;: 2, &#39;ج&#39;: 3, &#39;د&#39;: 4, &#39;ه&#39;: 5,&#39;ة&#39;: 5, &#39;و&#39;: 6,&#39;ؤ&#39;: 1, &#39;ز&#39;: 7, &#39;ح&#39;: 8, &#39;ط&#39;: 9, &#39;ي&#39;: 10,&#39;ئ&#39;: 1, &#39;ك&#39;: 11, &#39;ل&#39;: 12, &#39;م&#39;: 13, &#39;ن&#39;: 14, &#39;س&#39;: 15, &#39;ع&#39;: 16, &#39;ف&#39;: 17, &#39;ص&#39;: 18, &#39;ق&#39;: 19, &#39;ر&#39;: 20, &#39;ش&#39;: 21, &#39;ت&#39;: 22, &#39;ث&#39;: 23, &#39;خ&#39;: 24, &#39;ذ&#39;: 25, &#39;ض&#39;: 26, &#39;ظ&#39;: 27, &#39;غ&#39;: 28,
+		},
+        &quot;cell-small-digits&quot;: {
+		
+		&#39;ا&#39;: 1,&#39;أ&#39;: 1,&#39;إ&#39;: 1,&#39;ى&#39;: 1, &#39;ب&#39;: 2, &#39;ج&#39;: 3, &#39;د&#39;: 4, &#39;ه&#39;: 5,&#39;ة&#39;: 5, &#39;و&#39;: 6,&#39;ؤ&#39;: 1, &#39;ز&#39;: 7, &#39;ح&#39;: 8, &#39;ط&#39;: 9, &#39;ي&#39;: 1,&#39;ئ&#39;: 1, &#39;ك&#39;: 2, &#39;ل&#39;: 3, &#39;م&#39;: 4, &#39;ن&#39;: 5, &#39;س&#39;: 6, &#39;ع&#39;: 7, &#39;ف&#39;: 8, &#39;ص&#39;: 9, &#39;ق&#39;: 1, &#39;ر&#39;: 2, &#39;ش&#39;: 3, &#39;ت&#39;: 4, &#39;ث&#39;: 5, &#39;خ&#39;: 6, &#39;ذ&#39;: 7, &#39;ض&#39;: 8, &#39;ظ&#39;: 9, &#39;غ&#39;: 1,
+		}
+    };
+
+    // 2. RUNTIME CALCULATION CORE
+    function calculate() {
+        let rawText = document.getElementById(&#39;numInput&#39;).value;
+        
+        // Lowercase English letters, but keep Arabic and Hebrew Unicode structures intact
+        let cleanText = rawText.toLowerCase().replace(/[\s\p{P}]/gu, &#39;&#39;);
+
+        if (cleanText.length === 0) {
+            clearTable();
+            return;
+        }
+
+        // Cycle through your 9 display layout elements
+        for (const cellId in LOOKUP_MAPS) {
+            let totalCellSum = 0;
+
+            // Step across each individual typed letter
+            for (let char of cleanText) {
+                // Instantly checks if letter exists in database for this specific grid cell
+                if (LOOKUP_MAPS[cellId][char] !== undefined) {
+                    totalCellSum += LOOKUP_MAPS[cellId][char];
+                }
+            }
+
+            // Print true cumulative index total straight to the UI matrix
+            document.getElementById(cellId).innerText = totalCellSum;
+        }
+    }
+
+    function clearTable() {
+        for (const cellId in LOOKUP_MAPS) {
+            document.getElementById(cellId).innerText = &#39;-&#39;;
+        }
+    }
+
+    document.getElementById(&#39;numInput&#39;).addEventListener(&#39;input&#39;, calculate);
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;

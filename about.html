@@ -1,0 +1,319 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ar&quot; dir=&#39;rtl&#39;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;نبذة&lt;/title&gt;
+  &lt;style&gt;
+    :root {
+      --bg-color: #ffffff;
+      --card-bg: #f8f9fa;
+      --text-color: #212529;
+      --border-color: #dee2e6;
+      --accent-color: #0d6efd;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #1976D2;
+      color: var(--text-color);
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+	.hcontainer {
+      background-color: #f5f5f5;
+	  width: 100%;
+	  max-width: 80%	;
+	  padding: 20px;
+	  margin-bottom: 20px;
+      margin-right: auto;
+      margin-left: auto;
+      box-sizing: border-box;
+    }
+		.custom-header {
+    display: flex;
+     
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    gap: 0.5rem;
+    justify-content: center;
+}
+	.nav-link.active {
+    color: #fff;
+    background-color: #0d6efd;
+}
+		.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+    .crypto-widget {
+      width: 100%;
+      max-width: 80%;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+	  margin-right: auto;
+	  margin-left: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-sizing: border-box;
+    }
+
+    .widget-title {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.25rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* Tabs Layout */
+    .crypto-tabs {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 10px;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 8px 12px;
+      border: none;
+      background: none;
+      font-weight: 500;
+      cursor: pointer;
+      color: #6c757d;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    .tab-btn.active {
+      color: #fff;
+      background-color: var(--accent-color);
+    }
+
+    /* Content Panels */
+    .crypto-panel {
+      display: none;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .crypto-panel.active {
+      display: flex;
+    }
+
+    .network-badge {
+      font-size: 0.75rem;
+      background: #e9ecef;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #495057;
+    }
+
+    .qr-container {
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .qr-container img {
+      display: block;
+      width: 160px;
+      height: 160px;
+    }
+
+    /* Address Copy Field */
+    .address-box {
+      display: flex;
+      width: 100%;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    .address-text {
+      flex: 1;
+      padding: 10px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+      user-select: all;
+    }
+
+    .copy-btn {
+      background: #e9ecef;
+      border: none;
+      border-left: 1px solid var(--border-color);
+      padding: 0 15px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: #dee2e6;
+    }
+
+    .copy-btn:active {
+      background: #ced4da;
+    }
+
+    .hint-text {
+      font-size: 0.75rem;
+      color: #6c757d;
+      margin: 0;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+	&lt;div class=&quot;hcontainer&quot;&gt;
+&lt;header class=&quot;custom-header&quot;&gt;
+      &lt;ul class=&quot;nav-pills&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;index.html&quot; class=&quot;nav-link active&quot; aria-current=&quot;page&quot;&gt;حساب الحروف&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;sergold.html&quot; class=&quot;nav-link&quot;&gt;السر الذهبي&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;about.html&quot; class=&quot;nav-link&quot;&gt;نبذة عن التطبيق&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/header&gt;
+&lt;/div&gt;
+
+  &lt;div class=&quot;crypto-widget&quot;&gt;
+    &lt;h4 class=&quot;widget-title&quot;&gt;برمجة وتطوير&lt;/h4&gt;
+	&lt;p&gt;تمت برمجة التطبيق من قبل المبرمج فصل الخطاب من &lt;b style=&#39;color:#0080ff;&#39;&gt;&lt;a href=&#39;https://almushaikhi.forumarabia.com/forum&#39;&gt;منتدى أبو أزهر المشايخي&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+	&lt;p&gt;هذا التطبيق مجاني بالكامل ويمكنك التبرع للمبرمج عبر منصات العملات الرقمية لدعم وتطوير التطبيق&lt;/p&gt;
+	&lt;p style=&#39;text-align:center;&#39;&gt;حساب الحروف والسر الذهبي مأخوذة من كتب ودروس أبو أزهر المشايخي جعلها الله في ميزان حسناته&lt;/p&gt;
+	
+    
+    &lt;!-- Tab Navigation Buttons --&gt;
+    &lt;div class=&quot;crypto-tabs&quot;&gt;
+      &lt;button class=&quot;tab-btn active&quot; onclick=&quot;switchTab(event, &#39;btc&#39;)&quot;&gt;BTC&lt;/button&gt;
+      &lt;button class=&quot;tab-btn&quot; onclick=&quot;switchTab(event, &#39;eth&#39;)&quot;&gt;ETH&lt;/button&gt;
+      &lt;button class=&quot;tab-btn&quot; onclick=&quot;switchTab(event, &#39;usdt&#39;)&quot;&gt;USDT&lt;/button&gt;
+      &lt;button class=&quot;tab-btn&quot; onclick=&quot;switchTab(event, &#39;usdc&#39;)&quot;&gt;USDC&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- BTC Panel --&gt;
+    &lt;div id=&quot;btc&quot; class=&quot;crypto-panel active&quot;&gt;
+      &lt;span class=&quot;network-badge&quot;&gt;شبكة بتكوين&lt;/span&gt;
+      &lt;div class=&quot;qr-container&quot;&gt;
+        &lt;!-- Generates QR securely on the fly using ://qrserver.com (No tracking/No account needed) --&gt;
+        &lt;img src=&quot;imgs/qrcode_btc.png&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;address-box&quot;&gt;
+        &lt;div class=&quot;address-text&quot; id=&quot;btc-addr&quot;&gt;1P9MTBoMf53KfQgNQFcrDEZYt7fipJ9Y5A&lt;/div&gt;
+        &lt;button class=&quot;copy-btn&quot; onclick=&quot;copyAddress(&#39;btc-addr&#39;)&quot;&gt;نسخ&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;hint-text&quot;&gt;تأكد من عنوان البتكوين قبل الارسال&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- ETH Panel --&gt;
+    &lt;div id=&quot;eth&quot; class=&quot;crypto-panel&quot;&gt;
+      &lt;span class=&quot;network-badge&quot;&gt;Ethereum (ERC-20)&lt;/span&gt;
+      &lt;div class=&quot;qr-container&quot;&gt;
+        &lt;img src=&quot;imgs/qrcode_eth.png&quot; alt=&quot;ETH QR&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;address-box&quot;&gt;
+        &lt;div class=&quot;address-text&quot; id=&quot;eth-addr&quot;&gt;0xB1C993d7a2d0A178744483Ae92F4937Db1865b42&lt;/div&gt;
+        &lt;button class=&quot;copy-btn&quot; onclick=&quot;copyAddress(&#39;eth-addr&#39;)&quot;&gt;نسخ&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;hint-text&quot;&gt;تأكد من العنوان قبل الارسال&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- USDT Panel --&gt;
+    &lt;div id=&quot;usdt&quot; class=&quot;crypto-panel&quot;&gt;
+      &lt;span class=&quot;network-badge&quot;&gt;USDT (BEP-20)&lt;/span&gt;
+      &lt;div class=&quot;qr-container&quot;&gt;
+        &lt;img src=&quot;imgs/qrcode_usdt_bep20.png&quot; alt=&quot;USDT QR&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;address-box&quot;&gt;
+        &lt;div class=&quot;address-text&quot; id=&quot;usdt-addr&quot;&gt;0xB1C993d7a2d0A178744483Ae92F4937Db1865b42&lt;/div&gt;
+        &lt;button class=&quot;copy-btn&quot; onclick=&quot;copyAddress(&#39;usdt-addr&#39;)&quot;&gt;نسخ&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;hint-text&quot;&gt;تأكد من العنوان قبل الارسال&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- USDC Panel --&gt;
+    &lt;div id=&quot;usdc&quot; class=&quot;crypto-panel&quot;&gt;
+      &lt;span class=&quot;network-badge&quot;&gt;USDC&lt;/span&gt;
+      &lt;div class=&quot;qr-container&quot;&gt;
+        &lt;img src=&quot;imgs/qrcode_usdc.png&quot; alt=&quot;USDC QR&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;address-box&quot;&gt;
+        &lt;div class=&quot;address-text&quot; id=&quot;usdc-addr&quot;&gt;0xB1C993d7a2d0A178744483Ae92F4937Db1865b42&lt;/div&gt;
+        &lt;button class=&quot;copy-btn&quot; onclick=&quot;copyAddress(&#39;usdc-addr&#39;)&quot;&gt;نسخ&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;hint-text&quot;&gt;تأكد من العنوان قبل الارسال&lt;/p&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    // Tab Switching Logic
+    function switchTab(evt, coinId) {
+      const panels = document.querySelectorAll(&#39;.crypto-panel&#39;);
+      const buttons = document.querySelectorAll(&#39;.tab-btn&#39;);
+      
+      panels.forEach(panel =&gt; panel.classList.remove(&#39;active&#39;));
+      buttons.forEach(btn =&gt; btn.classList.remove(&#39;active&#39;));
+      
+      document.getElementById(coinId).classList.add(&#39;active&#39;);
+      evt.currentTarget.classList.add(&#39;active&#39;);
+    }
+
+    // Copy to Clipboard Logic
+    function copyAddress(elementId) {
+      const addressText = document.getElementById(elementId).innerText;
+      const button = document.querySelector(`#${elementId} + .copy-btn`);
+      
+      navigator.clipboard.writeText(addressText).then(() =&gt; {
+        const originalText = button.innerText;
+        button.innerText = &#39;Copied!&#39;;
+        button.style.backgroundColor = &#39;#28a745&#39;;
+        button.style.color = &#39;#fff&#39;;
+        
+        setTimeout(() =&gt; {
+          button.innerText = originalText;
+          button.style.backgroundColor = &#39;&#39;;
+          button.style.color = &#39;&#39;;
+        }, 1500);
+      }).catch(err =&gt; {
+        console.error(&#39;Failed to copy text: &#39;, err);
+      });
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
