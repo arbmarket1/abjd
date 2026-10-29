@@ -1,14 +1,14 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ar&quot; dir=&#39;rtl&#39;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+<!DOCTYPE html>
+<html lang="ar" dir='rtl'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-    &lt;title&gt;السر الذهبي&lt;/title&gt;
-    &lt;style&gt;
+    <title>السر الذهبي</title>
+    <style>
         * {
             box-sizing: border-box;
-            font-family: &quot;Amiri Quran&quot;,cursive, serif;, Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Amiri Quran",cursive, serif;, Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
             background-color: #1976D2;
@@ -131,63 +131,63 @@
             white-space: pre-wrap;
             color: #222222;
         }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    </style>
+</head>
+<body>
 
-&lt;div class=&quot;hcontainer&quot;&gt;
-&lt;header class=&quot;custom-header&quot;&gt;
-      &lt;ul class=&quot;nav-pills&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;index.html&quot; class=&quot;nav-link active&quot; aria-current=&quot;page&quot;&gt;حساب الحروف&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;sergold.html&quot; class=&quot;nav-link&quot;&gt;السر الذهبي&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;about.html&quot; class=&quot;nav-link&quot;&gt;نبذة عن التطبيق&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/header&gt;
-&lt;/div&gt;
+<div class="hcontainer">
+<header class="custom-header">
+      <ul class="nav-pills">
+        <li><a href="index.html" class="nav-link active" aria-current="page">حساب الحروف</a></li>
+        <li><a href="sergold.html" class="nav-link">السر الذهبي</a></li>
+        <li><a href="about.html" class="nav-link">نبذة عن التطبيق</a></li>
+      </ul>
+    </header>
+</div>
 
-&lt;div class=&quot;container&quot;&gt;
-    &lt;h2&gt;السر الذهبي&lt;/h2&gt;
+<div class="container">
+    <h2>السر الذهبي</h2>
     
-    &lt;!-- Radio selection toggle --&gt;
-    &lt;div class=&quot;radio-group&quot;&gt;
-        &lt;label class=&quot;radio-label&quot;&gt;
-            &lt;input type=&quot;radio&quot; name=&quot;mode&quot; value=&quot;encode&quot; checked id=&quot;modeEncode&quot;&gt; السر
-        &lt;/label&gt;
-        &lt;label class=&quot;radio-label&quot;&gt;
-            &lt;input type=&quot;radio&quot; name=&quot;mode&quot; value=&quot;decode&quot; id=&quot;modeDecode&quot;&gt; فك السر
-        &lt;/label&gt;
-    &lt;/div&gt;
+    <!-- Radio selection toggle -->
+    <div class="radio-group">
+        <label class="radio-label">
+            <input type="radio" name="mode" value="encode" checked id="modeEncode"> السر
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="mode" value="decode" id="modeDecode"> فك السر
+        </label>
+    </div>
 
-    &lt;label class=&quot;box-label&quot; for=&quot;inputText&quot;&gt;النص&lt;/label&gt;
-    &lt;textarea id=&quot;inputText&quot; placeholder=&quot;ادخل النص هنا...&quot;&gt;&lt;/textarea&gt;
-	&lt;div class=&quot;count-display&quot;&gt;عدد الأحرف &lt;span id=&quot;charCount&quot;&gt;0&lt;/span&gt;
-	&lt;/div&gt;
+    <label class="box-label" for="inputText">النص</label>
+    <textarea id="inputText" placeholder="ادخل النص هنا..."></textarea>
+	<div class="count-display">عدد الأحرف <span id="charCount">0</span>
+	</div>
 
-    &lt;label class=&quot;box-label&quot;&gt;النتيجة&lt;/label&gt;
-    &lt;div class=&quot;output-box&quot; id=&quot;outputText&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
+    <label class="box-label">النتيجة</label>
+    <div class="output-box" id="outputText"></div>
+</div>
 
-&lt;script&gt;
+<script>
     // 1. Setup translation alphabets matching your Python dictionary rules
-    const st  = &quot;abcdefghijklmnopqrstuvwxyz&quot;;
-    const st2 = &quot;afkpuzbglqvchmrwdinsxejoty&quot;;
+    const st  = "abcdefghijklmnopqrstuvwxyz";
+    const st2 = "afkpuzbglqvchmrwdinsxejoty";
 
     // Build the bi-directional dictionaries
-    const encodeMap = {&#39;ا&#39;: &#39;أ&#39;,&#39;إ&#39;: &#39;أ&#39;,&#39;أ&#39;: &#39;أ&#39;, &#39;ب&#39;: &#39;ب&#39;, &#39;ت&#39;: &#39;ج&#39;, &#39;ث&#39;: &#39;د&#39;, &#39;ج&#39;: &#39;ه&#39;, &#39;ح&#39;: &#39;و&#39;, &#39;خ&#39;: &#39;ز&#39;, &#39;د&#39;: &#39;ح&#39;, &#39;ذ&#39;: &#39;ط&#39;, &#39;ر&#39;: &#39;ي&#39;, &#39;ز&#39;: &#39;ك&#39;, &#39;س&#39;: &#39;ل&#39;, &#39;ش&#39;: &#39;م&#39;, &#39;ص&#39;: &#39;ن&#39;, &#39;ض&#39;: &#39;س&#39;, &#39;ط&#39;: &#39;ع&#39;, &#39;ظ&#39;: &#39;ف&#39;, &#39;ع&#39;: &#39;ص&#39;, &#39;غ&#39;: &#39;ق&#39;, &#39;ف&#39;: &#39;ر&#39;, &#39;ق&#39;: &#39;ش&#39;, &#39;ك&#39;: &#39;ت&#39;, &#39;ل&#39;: &#39;ث&#39;, &#39;م&#39;: &#39;خ&#39;, &#39;ن&#39;: &#39;ذ&#39;, &#39;ه&#39;: &#39;ض&#39;,&#39;ة&#39;: &#39;ض&#39;, &#39;و&#39;: &#39;ظ&#39;,&#39;ؤ&#39;: &#39;أ&#39;, &#39;ي&#39;: &#39;غ&#39;};
+    const encodeMap = {'ا': 'أ','إ': 'أ','أ': 'أ', 'ب': 'ب', 'ت': 'ج', 'ث': 'د', 'ج': 'ه', 'ح': 'و', 'خ': 'ز', 'د': 'ح', 'ذ': 'ط', 'ر': 'ي', 'ز': 'ك', 'س': 'ل', 'ش': 'م', 'ص': 'ن', 'ض': 'س', 'ط': 'ع', 'ظ': 'ف', 'ع': 'ص', 'غ': 'ق', 'ف': 'ر', 'ق': 'ش', 'ك': 'ت', 'ل': 'ث', 'م': 'خ', 'ن': 'ذ', 'ه': 'ض','ة': 'ض', 'و': 'ظ','ؤ': 'أ', 'ي': 'غ'};
     
-	const decodeMap = {&#39;ا&#39;: &#39;أ&#39;,&#39;أ&#39;: &#39;أ&#39;,&#39;إ&#39;: &#39;أ&#39;, &#39;ب&#39;: &#39;ب&#39;, &#39;ج&#39;: &#39;ت&#39;, &#39;د&#39;: &#39;ث&#39;, &#39;ه&#39;: &#39;ج&#39;, &#39;و&#39;: &#39;ح&#39;,&#39;ؤ&#39;: &#39;أ&#39;, &#39;ز&#39;: &#39;خ&#39;, &#39;ح&#39;: &#39;د&#39;, &#39;ط&#39;: &#39;ذ&#39;, &#39;ي&#39;: &#39;ر&#39;, &#39;ك&#39;: &#39;ز&#39;, &#39;ل&#39;: &#39;س&#39;, &#39;م&#39;: &#39;ش&#39;, &#39;ن&#39;: &#39;ص&#39;, &#39;س&#39;: &#39;ض&#39;, &#39;ع&#39;: &#39;ط&#39;, &#39;ف&#39;: &#39;ظ&#39;, &#39;ص&#39;: &#39;ع&#39;, &#39;ق&#39;: &#39;غ&#39;, &#39;ر&#39;: &#39;ف&#39;, &#39;ش&#39;: &#39;ق&#39;, &#39;ت&#39;: &#39;ك&#39;, &#39;ث&#39;: &#39;ل&#39;, &#39;خ&#39;: &#39;م&#39;, &#39;ذ&#39;: &#39;ن&#39;, &#39;ض&#39;: &#39;ه&#39;, &#39;ظ&#39;: &#39;و&#39;, &#39;غ&#39;: &#39;ي&#39;};
+	const decodeMap = {'ا': 'أ','أ': 'أ','إ': 'أ', 'ب': 'ب', 'ج': 'ت', 'د': 'ث', 'ه': 'ج', 'و': 'ح','ؤ': 'أ', 'ز': 'خ', 'ح': 'د', 'ط': 'ذ', 'ي': 'ر', 'ك': 'ز', 'ل': 'س', 'م': 'ش', 'ن': 'ص', 'س': 'ض', 'ع': 'ط', 'ف': 'ظ', 'ص': 'ع', 'ق': 'غ', 'ر': 'ف', 'ش': 'ق', 'ت': 'ك', 'ث': 'ل', 'خ': 'م', 'ذ': 'ن', 'ض': 'ه', 'ظ': 'و', 'غ': 'ي'};
 
-    const inputArea = document.getElementById(&#39;inputText&#39;);
-    const outputDiv = document.getElementById(&#39;outputText&#39;);
-    const encodeRadio = document.getElementById(&#39;modeEncode&#39;);
-	const countSpan = document.getElementById(&#39;charCount&#39;); 
+    const inputArea = document.getElementById('inputText');
+    const outputDiv = document.getElementById('outputText');
+    const encodeRadio = document.getElementById('modeEncode');
+	const countSpan = document.getElementById('charCount'); 
 	
     // 2. Cipher Core Processing Function
     function processText() {
         const text = inputArea.value;
         const isEncode = encodeRadio.checked;
         const currentMap = isEncode ? encodeMap : decodeMap;
-		const textWithoutSpaces = text.replace(/\s/g, &#39;&#39;);
+		const textWithoutSpaces = text.replace(/\s/g, '');
         countSpan.textContent = textWithoutSpaces.length;
         		
         let result = [];
@@ -205,17 +205,17 @@
             }
         }
 
-        // Output formatting: matches the &#39; &#39;.join() style requirement from your Python script
+        // Output formatting: matches the ' '.join() style requirement from your Python script
         // Filter out double-spaces caused by joining array steps
-        outputDiv.textContent = result.join(isEncode ? &#39; &#39; : &#39;&#39;).replace(/\s+/g, &#39; &#39;).trim();
+        outputDiv.textContent = result.join(isEncode ? ' ' : '').replace(/\s+/g, ' ').trim();
     }
 
     // 3. Real-time updates attached to text entries and toggle changes
-    inputArea.addEventListener(&#39;input&#39;, processText);
-    document.getElementsByName(&#39;mode&#39;).forEach(radio =&gt; {
-        radio.addEventListener(&#39;change&#39;, processText);
+    inputArea.addEventListener('input', processText);
+    document.getElementsByName('mode').forEach(radio => {
+        radio.addEventListener('change', processText);
     });
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
