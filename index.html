@@ -1,14 +1,14 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ar&quot; dir=&#39;rtl&#39;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+<!DOCTYPE html>
+<html lang="ar" dir='rtl'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-    &lt;title&gt;برنامج حساب الجمل&lt;/title&gt;
-    &lt;style&gt;
+    <title>برنامج حساب الجمل</title>
+    <style>
         * {
             box-sizing: border-box;
-            font-family: &quot;Amiri Quran&quot;,Arial,cursive,&#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Amiri Quran",Arial,cursive,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
             background-color: #1976D2;
@@ -73,7 +73,7 @@
         .input-container {
             margin-bottom: 35px;
         }
-        input[type=&quot;text&quot;] {
+        input[type="text"] {
             width: 100%;
             max-width: 320px;
             padding: 15px 20px;
@@ -86,7 +86,7 @@
             outline: none;
             background-color: #ffffff;
         }
-        input[type=&quot;text&quot;]:placeholder-shown {
+        input[type="text"]:placeholder-shown {
             direction: ltr;
         }
         table {
@@ -127,103 +127,103 @@
             color: #2196F3;
             font-size: 24px;
         }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    </style>
+</head>
+<body>
 
-&lt;div class=&quot;hcontainer&quot;&gt;
-&lt;header class=&quot;custom-header&quot;&gt;
-      &lt;ul class=&quot;nav-pills&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;index.html&quot; class=&quot;nav-link active&quot; aria-current=&quot;page&quot;&gt;حساب الحروف&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;sergold.html&quot; class=&quot;nav-link&quot;&gt;السر الذهبي&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;about.html&quot; class=&quot;nav-link&quot;&gt;نبذة عن التطبيق&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/header&gt;
-&lt;/div&gt;
+<div class="hcontainer">
+<header class="custom-header">
+      <ul class="nav-pills">
+        <li><a href="index.html" class="nav-link active" aria-current="page">حساب الحروف</a></li>
+        <li><a href="sergold.html" class="nav-link">السر الذهبي</a></li>
+        <li><a href="about.html" class="nav-link">نبذة عن التطبيق</a></li>
+      </ul>
+    </header>
+</div>
 
-&lt;div class=&quot;container&quot;&gt;
-	&lt;div class=&quot;callout&quot;&gt;&lt;a href=&quot;https://almushaikhi.forumarabia.com/forum&quot;&gt;للمزيد تفضل بزيارة منتدى أبوأزهر المشايخي&lt;/a&gt; &lt;/div&gt; 
-&lt;/div&gt;
+<div class="container">
+	<div class="callout"><a href="https://almushaikhi.forumarabia.com/forum">للمزيد تفضل بزيارة منتدى أبوأزهر المشايخي</a> </div> 
+</div>
 
-&lt;div class=&quot;container&quot;&gt;
+<div class="container">
 	
-    &lt;h2&gt;حساب الحروف&lt;/h2&gt;
+    <h2>حساب الحروف</h2>
     
-    &lt;div class=&quot;input-container&quot;&gt;
-        &lt;!-- dir=&quot;auto&quot; flips typing alignment to right-to-left dynamically for Arabic/Hebrew --&gt;
-        &lt;input type=&quot;text&quot; id=&quot;numInput&quot; dir=&quot;auto&quot; placeholder=&quot;حي قيوم&quot; autocomplete=&quot;off&quot;&gt;
-    &lt;/div&gt;
+    <div class="input-container">
+        <!-- dir="auto" flips typing alignment to right-to-left dynamically for Arabic/Hebrew -->
+        <input type="text" id="numInput" dir="auto" placeholder="حي قيوم" autocomplete="off">
+    </div>
 
-    &lt;table&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th&gt;&lt;/th&gt;
-                &lt;th&gt;رقمي&lt;/th&gt;
-                &lt;th&gt;حرفي&lt;/th&gt;
-                &lt;th&gt;عددي&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;tr&gt;
-                &lt;td&gt;كبير&lt;/td&gt;
-                &lt;td class=&quot;value-cell&quot; id=&quot;cell-big-digits&quot;&gt;-&lt;/td&gt;
-                &lt;td class=&quot;value-cell&quot; id=&quot;cell-big-chars&quot;&gt;-&lt;/td&gt;
-                &lt;td class=&quot;value-cell&quot; id=&quot;cell-big-numric&quot;&gt;-&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;مرتبة&lt;/td&gt;
-                &lt;td class=&quot;value-cell&quot; id=&quot;cell-mid-digits&quot;&gt;-&lt;/td&gt;
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>رقمي</th>
+                <th>حرفي</th>
+                <th>عددي</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>كبير</td>
+                <td class="value-cell" id="cell-big-digits">-</td>
+                <td class="value-cell" id="cell-big-chars">-</td>
+                <td class="value-cell" id="cell-big-numric">-</td>
+            </tr>
+            <tr>
+                <td>مرتبة</td>
+                <td class="value-cell" id="cell-mid-digits">-</td>
                 
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;صغير&lt;/td&gt;
-                &lt;td class=&quot;value-cell&quot; id=&quot;cell-small-digits&quot;&gt;-&lt;/td&gt;
+            </tr>
+            <tr>
+                <td>صغير</td>
+                <td class="value-cell" id="cell-small-digits">-</td>
                 
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-&lt;script&gt;
+<script>
     // 1. GLOBAL MULTI-LANGUAGE DATABASE FOR EVERY CELL
     // Instead of arrays, map specific characters straight to their values.
     // This allows you to mix English, Arabic, and Hebrew completely in one place.
     const LOOKUP_MAPS = {
-        &quot;cell-big-digits&quot;: {
+        "cell-big-digits": {
        
             // Arabic Abjad Standard Values (أبجد هوز حطي كلمن...)
-            &#39;أ&#39;:1,&#39;إ&#39;:1, &#39;ا&#39;:1,&#39;ى&#39;:1, &#39;ب&#39;:2, &#39;ج&#39;:3, &#39;د&#39;:4, &#39;ه&#39;:5,&#39;ة&#39;:5, &#39;و&#39;:6,&#39;ؤ&#39;:1, &#39;ز&#39;:7, &#39;ح&#39;:8, &#39;ط&#39;:9, &#39;ي&#39;:10,&#39;ئ&#39;:1, &#39;ك&#39;:20, &#39;ل&#39;:30, &#39;م&#39;:40, &#39;ن&#39;:50, &#39;س&#39;:60, &#39;ع&#39;:70, &#39;ف&#39;:80, &#39;ص&#39;:90, &#39;ق&#39;:100, &#39;ر&#39;:200, &#39;ش&#39;:300, &#39;ت&#39;:400, &#39;ث&#39;:500, &#39;خ&#39;:600, &#39;ذ&#39;:700, &#39;ض&#39;:800, &#39;ظ&#39;:900, &#39;غ&#39;:1000,
+            'أ':1,'إ':1, 'ا':1,'ى':1, 'ب':2, 'ج':3, 'د':4, 'ه':5,'ة':5, 'و':6,'ؤ':1, 'ز':7, 'ح':8, 'ط':9, 'ي':10,'ئ':1, 'ك':20, 'ل':30, 'م':40, 'ن':50, 'س':60, 'ع':70, 'ف':80, 'ص':90, 'ق':100, 'ر':200, 'ش':300, 'ت':400, 'ث':500, 'خ':600, 'ذ':700, 'ض':800, 'ظ':900, 'غ':1000,
         },
 
-        &quot;cell-big-chars&quot;: {
+        "cell-big-chars": {
        
             // Arabic Example Small/Reduced Values (Example only)
-            &#39;ا&#39;: 111,&#39;إ&#39;: 111,&#39;أ&#39;: 111,&#39;ى&#39;: 111, &#39;ب&#39;: 3, &#39;ج&#39;: 53, &#39;د&#39;: 35, &#39;ه&#39;: 6,&#39;ة&#39;: 6, &#39;و&#39;: 13,&#39;111&#39;: 13, &#39;ز&#39;: 18, &#39;ح&#39;: 9, &#39;ط&#39;: 10, &#39;ي&#39;: 11,&#39;ئ&#39;: 111, &#39;ك&#39;: 101, &#39;ل&#39;: 71, &#39;م&#39;: 90, &#39;ن&#39;: 106, &#39;س&#39;: 120, &#39;ع&#39;: 130, &#39;ف&#39;: 81, &#39;ص&#39;: 95, &#39;ق&#39;: 181, &#39;ر&#39;: 201, &#39;ش&#39;: 360, &#39;ت&#39;: 401, &#39;ث&#39;: 501, &#39;خ&#39;: 601, &#39;ذ&#39;: 731, &#39;ض&#39;: 805, &#39;ظ&#39;: 901, &#39;غ&#39;: 1060,
+            'ا': 111,'إ': 111,'أ': 111,'ى': 111, 'ب': 3, 'ج': 53, 'د': 35, 'ه': 6,'ة': 6, 'و': 13,'111': 13, 'ز': 18, 'ح': 9, 'ط': 10, 'ي': 11,'ئ': 111, 'ك': 101, 'ل': 71, 'م': 90, 'ن': 106, 'س': 120, 'ع': 130, 'ف': 81, 'ص': 95, 'ق': 181, 'ر': 201, 'ش': 360, 'ت': 401, 'ث': 501, 'خ': 601, 'ذ': 731, 'ض': 805, 'ظ': 901, 'غ': 1060,
           
         },
 
-        &quot;cell-big-numric&quot;: {
+        "cell-big-numric": {
          
             // Add custom Arabic or Hebrew configurations for this calculation method below
-			&#39;ا&#39;: 19,&#39;أ&#39;: 19,&#39;إ&#39;: 19,&#39;ى&#39;: 19, &#39;ب&#39;: 611, &#39;ج&#39;: 1036, &#39;د&#39;: 278, &#39;ه&#39;: 705,&#39;ة&#39;: 705, &#39;و&#39;: 465,&#39;ؤ&#39;: 19, &#39;ز&#39;: 137, &#39;ح&#39;: 606, &#39;ط&#39;: 535, &#39;ي&#39;: 575,&#39;ئ&#39;: 19, &#39;ك&#39;: 630, &#39;ل&#39;: 1091, &#39;م&#39;: 333, &#39;ن&#39;: 760, &#39;س&#39;: 520, &#39;ع&#39;: 192, &#39;ف&#39;: 651, &#39;ص&#39;: 590, &#39;ق&#39;: 56, &#39;ر&#39;: 511, &#39;ش&#39;: 1087, &#39;ت&#39;: 329, &#39;ث&#39;: 756, &#39;خ&#39;: 516, &#39;ذ&#39;: 188, &#39;ض&#39;: 647, &#39;ظ&#39;: 586, &#39;غ&#39;: 111,
+			'ا': 19,'أ': 19,'إ': 19,'ى': 19, 'ب': 611, 'ج': 1036, 'د': 278, 'ه': 705,'ة': 705, 'و': 465,'ؤ': 19, 'ز': 137, 'ح': 606, 'ط': 535, 'ي': 575,'ئ': 19, 'ك': 630, 'ل': 1091, 'م': 333, 'ن': 760, 'س': 520, 'ع': 192, 'ف': 651, 'ص': 590, 'ق': 56, 'ر': 511, 'ش': 1087, 'ت': 329, 'ث': 756, 'خ': 516, 'ذ': 188, 'ض': 647, 'ظ': 586, 'غ': 111,
         },
 
         // --- Placeholders for remaining 6 methods ---
-        &quot;cell-mid-digits&quot;:   {
-		&#39;ا&#39;: 1,&#39;أ&#39;: 1,&#39;إ&#39;: 1,&#39;ى&#39;: 1, &#39;ب&#39;: 2, &#39;ج&#39;: 3, &#39;د&#39;: 4, &#39;ه&#39;: 5,&#39;ة&#39;: 5, &#39;و&#39;: 6,&#39;ؤ&#39;: 1, &#39;ز&#39;: 7, &#39;ح&#39;: 8, &#39;ط&#39;: 9, &#39;ي&#39;: 10,&#39;ئ&#39;: 1, &#39;ك&#39;: 11, &#39;ل&#39;: 12, &#39;م&#39;: 13, &#39;ن&#39;: 14, &#39;س&#39;: 15, &#39;ع&#39;: 16, &#39;ف&#39;: 17, &#39;ص&#39;: 18, &#39;ق&#39;: 19, &#39;ر&#39;: 20, &#39;ش&#39;: 21, &#39;ت&#39;: 22, &#39;ث&#39;: 23, &#39;خ&#39;: 24, &#39;ذ&#39;: 25, &#39;ض&#39;: 26, &#39;ظ&#39;: 27, &#39;غ&#39;: 28,
+        "cell-mid-digits":   {
+		'ا': 1,'أ': 1,'إ': 1,'ى': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5,'ة': 5, 'و': 6,'ؤ': 1, 'ز': 7, 'ح': 8, 'ط': 9, 'ي': 10,'ئ': 1, 'ك': 11, 'ل': 12, 'م': 13, 'ن': 14, 'س': 15, 'ع': 16, 'ف': 17, 'ص': 18, 'ق': 19, 'ر': 20, 'ش': 21, 'ت': 22, 'ث': 23, 'خ': 24, 'ذ': 25, 'ض': 26, 'ظ': 27, 'غ': 28,
 		},
-        &quot;cell-small-digits&quot;: {
+        "cell-small-digits": {
 		
-		&#39;ا&#39;: 1,&#39;أ&#39;: 1,&#39;إ&#39;: 1,&#39;ى&#39;: 1, &#39;ب&#39;: 2, &#39;ج&#39;: 3, &#39;د&#39;: 4, &#39;ه&#39;: 5,&#39;ة&#39;: 5, &#39;و&#39;: 6,&#39;ؤ&#39;: 1, &#39;ز&#39;: 7, &#39;ح&#39;: 8, &#39;ط&#39;: 9, &#39;ي&#39;: 1,&#39;ئ&#39;: 1, &#39;ك&#39;: 2, &#39;ل&#39;: 3, &#39;م&#39;: 4, &#39;ن&#39;: 5, &#39;س&#39;: 6, &#39;ع&#39;: 7, &#39;ف&#39;: 8, &#39;ص&#39;: 9, &#39;ق&#39;: 1, &#39;ر&#39;: 2, &#39;ش&#39;: 3, &#39;ت&#39;: 4, &#39;ث&#39;: 5, &#39;خ&#39;: 6, &#39;ذ&#39;: 7, &#39;ض&#39;: 8, &#39;ظ&#39;: 9, &#39;غ&#39;: 1,
+		'ا': 1,'أ': 1,'إ': 1,'ى': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5,'ة': 5, 'و': 6,'ؤ': 1, 'ز': 7, 'ح': 8, 'ط': 9, 'ي': 1,'ئ': 1, 'ك': 2, 'ل': 3, 'م': 4, 'ن': 5, 'س': 6, 'ع': 7, 'ف': 8, 'ص': 9, 'ق': 1, 'ر': 2, 'ش': 3, 'ت': 4, 'ث': 5, 'خ': 6, 'ذ': 7, 'ض': 8, 'ظ': 9, 'غ': 1,
 		}
     };
 
     // 2. RUNTIME CALCULATION CORE
     function calculate() {
-        let rawText = document.getElementById(&#39;numInput&#39;).value;
+        let rawText = document.getElementById('numInput').value;
         
         // Lowercase English letters, but keep Arabic and Hebrew Unicode structures intact
-        let cleanText = rawText.toLowerCase().replace(/[\s\p{P}]/gu, &#39;&#39;);
+        let cleanText = rawText.toLowerCase().replace(/[\s\p{P}]/gu, '');
 
         if (cleanText.length === 0) {
             clearTable();
@@ -249,12 +249,12 @@
 
     function clearTable() {
         for (const cellId in LOOKUP_MAPS) {
-            document.getElementById(cellId).innerText = &#39;-&#39;;
+            document.getElementById(cellId).innerText = '-';
         }
     }
 
-    document.getElementById(&#39;numInput&#39;).addEventListener(&#39;input&#39;, calculate);
-&lt;/script&gt;
+    document.getElementById('numInput').addEventListener('input', calculate);
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
+</body>
+</html>
