@@ -1,10 +1,10 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;ar&quot; dir=&#39;rtl&#39;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;title&gt;نبذة&lt;/title&gt;
-  &lt;style&gt;
+<!DOCTYPE html>
+<html lang="ar" dir='rtl'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نبذة</title>
+  <style>
     :root {
       --bg-color: #ffffff;
       --card-bg: #f8f9fa;
@@ -197,101 +197,101 @@
       color: #6c757d;
       margin: 0;
     }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+  </style>
+</head>
+<body>
 	
-	&lt;div class=&quot;hcontainer&quot;&gt;
-&lt;header class=&quot;custom-header&quot;&gt;
-      &lt;ul class=&quot;nav-pills&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;index.html&quot; class=&quot;nav-link active&quot; aria-current=&quot;page&quot;&gt;حساب الحروف&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;sergold.html&quot; class=&quot;nav-link&quot;&gt;السر الذهبي&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;about.html&quot; class=&quot;nav-link&quot;&gt;نبذة عن التطبيق&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/header&gt;
-&lt;/div&gt;
+	<div class="hcontainer">
+<header class="custom-header">
+      <ul class="nav-pills">
+        <li><a href="index.html" class="nav-link active" aria-current="page">حساب الحروف</a></li>
+        <li><a href="sergold.html" class="nav-link">السر الذهبي</a></li>
+        <li><a href="about.html" class="nav-link">نبذة عن التطبيق</a></li>
+      </ul>
+    </header>
+</div>
 
-  &lt;div class=&quot;crypto-widget&quot;&gt;
-    &lt;h4 class=&quot;widget-title&quot;&gt;برمجة وتطوير&lt;/h4&gt;
-	&lt;p&gt;تمت برمجة التطبيق من قبل المبرمج فصل الخطاب من &lt;b style=&#39;color:#0080ff;&#39;&gt;&lt;a href=&#39;https://almushaikhi.forumarabia.com/forum&#39;&gt;منتدى أبو أزهر المشايخي&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
-	&lt;p&gt;هذا التطبيق مجاني بالكامل ويمكنك التبرع للمبرمج عبر منصات العملات الرقمية لدعم وتطوير التطبيق&lt;/p&gt;
-	&lt;p style=&#39;text-align:center;&#39;&gt;حساب الحروف والسر الذهبي مأخوذة من كتب ودروس أبو أزهر المشايخي جعلها الله في ميزان حسناته&lt;/p&gt;
+  <div class="crypto-widget">
+    <h4 class="widget-title">برمجة وتطوير</h4>
+	<p>تمت برمجة التطبيق من قبل المبرمج فصل الخطاب من <b style='color:#0080ff;'><a href='https://almushaikhi.forumarabia.com/forum'>منتدى أبو أزهر المشايخي</a></b></p>
+	<p>هذا التطبيق مجاني بالكامل ويمكنك التبرع للمبرمج عبر منصات العملات الرقمية لدعم وتطوير التطبيق</p>
+	<p style='text-align:center;'>حساب الحروف والسر الذهبي مأخوذة من كتب ودروس أبو أزهر المشايخي جعلها الله في ميزان حسناته</p>
 	
     
-    &lt;!-- Tab Navigation Buttons --&gt;
-    &lt;div class=&quot;crypto-tabs&quot;&gt;
-      &lt;button class=&quot;tab-btn active&quot; onclick=&quot;switchTab(event, &#39;btc&#39;)&quot;&gt;BTC&lt;/button&gt;
-      &lt;button class=&quot;tab-btn&quot; onclick=&quot;switchTab(event, &#39;eth&#39;)&quot;&gt;ETH&lt;/button&gt;
-      &lt;button class=&quot;tab-btn&quot; onclick=&quot;switchTab(event, &#39;usdt&#39;)&quot;&gt;USDT&lt;/button&gt;
-      &lt;button class=&quot;tab-btn&quot; onclick=&quot;switchTab(event, &#39;usdc&#39;)&quot;&gt;USDC&lt;/button&gt;
-    &lt;/div&gt;
+    <!-- Tab Navigation Buttons -->
+    <div class="crypto-tabs">
+      <button class="tab-btn active" onclick="switchTab(event, 'btc')">BTC</button>
+      <button class="tab-btn" onclick="switchTab(event, 'eth')">ETH</button>
+      <button class="tab-btn" onclick="switchTab(event, 'usdt')">USDT</button>
+      <button class="tab-btn" onclick="switchTab(event, 'usdc')">USDC</button>
+    </div>
 
-    &lt;!-- BTC Panel --&gt;
-    &lt;div id=&quot;btc&quot; class=&quot;crypto-panel active&quot;&gt;
-      &lt;span class=&quot;network-badge&quot;&gt;شبكة بتكوين&lt;/span&gt;
-      &lt;div class=&quot;qr-container&quot;&gt;
-        &lt;!-- Generates QR securely on the fly using ://qrserver.com (No tracking/No account needed) --&gt;
-        &lt;img src=&quot;imgs/qrcode_btc.png&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;address-box&quot;&gt;
-        &lt;div class=&quot;address-text&quot; id=&quot;btc-addr&quot;&gt;1P9MTBoMf53KfQgNQFcrDEZYt7fipJ9Y5A&lt;/div&gt;
-        &lt;button class=&quot;copy-btn&quot; onclick=&quot;copyAddress(&#39;btc-addr&#39;)&quot;&gt;نسخ&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;p class=&quot;hint-text&quot;&gt;تأكد من عنوان البتكوين قبل الارسال&lt;/p&gt;
-    &lt;/div&gt;
+    <!-- BTC Panel -->
+    <div id="btc" class="crypto-panel active">
+      <span class="network-badge">شبكة بتكوين</span>
+      <div class="qr-container">
+        <!-- Generates QR securely on the fly using ://qrserver.com (No tracking/No account needed) -->
+        <img src="imgs/qrcode_btc.png">
+      </div>
+      <div class="address-box">
+        <div class="address-text" id="btc-addr">1P9MTBoMf53KfQgNQFcrDEZYt7fipJ9Y5A</div>
+        <button class="copy-btn" onclick="copyAddress('btc-addr')">نسخ</button>
+      </div>
+      <p class="hint-text">تأكد من عنوان البتكوين قبل الارسال</p>
+    </div>
 
-    &lt;!-- ETH Panel --&gt;
-    &lt;div id=&quot;eth&quot; class=&quot;crypto-panel&quot;&gt;
-      &lt;span class=&quot;network-badge&quot;&gt;Ethereum (ERC-20)&lt;/span&gt;
-      &lt;div class=&quot;qr-container&quot;&gt;
-        &lt;img src=&quot;imgs/qrcode_eth.png&quot; alt=&quot;ETH QR&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;address-box&quot;&gt;
-        &lt;div class=&quot;address-text&quot; id=&quot;eth-addr&quot;&gt;0xB1C993d7a2d0A178744483Ae92F4937Db1865b42&lt;/div&gt;
-        &lt;button class=&quot;copy-btn&quot; onclick=&quot;copyAddress(&#39;eth-addr&#39;)&quot;&gt;نسخ&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;p class=&quot;hint-text&quot;&gt;تأكد من العنوان قبل الارسال&lt;/p&gt;
-    &lt;/div&gt;
+    <!-- ETH Panel -->
+    <div id="eth" class="crypto-panel">
+      <span class="network-badge">Ethereum (ERC-20)</span>
+      <div class="qr-container">
+        <img src="imgs/qrcode_eth.png" alt="ETH QR">
+      </div>
+      <div class="address-box">
+        <div class="address-text" id="eth-addr">0xB1C993d7a2d0A178744483Ae92F4937Db1865b42</div>
+        <button class="copy-btn" onclick="copyAddress('eth-addr')">نسخ</button>
+      </div>
+      <p class="hint-text">تأكد من العنوان قبل الارسال</p>
+    </div>
 
-    &lt;!-- USDT Panel --&gt;
-    &lt;div id=&quot;usdt&quot; class=&quot;crypto-panel&quot;&gt;
-      &lt;span class=&quot;network-badge&quot;&gt;USDT (BEP-20)&lt;/span&gt;
-      &lt;div class=&quot;qr-container&quot;&gt;
-        &lt;img src=&quot;imgs/qrcode_usdt_bep20.png&quot; alt=&quot;USDT QR&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;address-box&quot;&gt;
-        &lt;div class=&quot;address-text&quot; id=&quot;usdt-addr&quot;&gt;0xB1C993d7a2d0A178744483Ae92F4937Db1865b42&lt;/div&gt;
-        &lt;button class=&quot;copy-btn&quot; onclick=&quot;copyAddress(&#39;usdt-addr&#39;)&quot;&gt;نسخ&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;p class=&quot;hint-text&quot;&gt;تأكد من العنوان قبل الارسال&lt;/p&gt;
-    &lt;/div&gt;
+    <!-- USDT Panel -->
+    <div id="usdt" class="crypto-panel">
+      <span class="network-badge">USDT (BEP-20)</span>
+      <div class="qr-container">
+        <img src="imgs/qrcode_usdt_bep20.png" alt="USDT QR">
+      </div>
+      <div class="address-box">
+        <div class="address-text" id="usdt-addr">0xB1C993d7a2d0A178744483Ae92F4937Db1865b42</div>
+        <button class="copy-btn" onclick="copyAddress('usdt-addr')">نسخ</button>
+      </div>
+      <p class="hint-text">تأكد من العنوان قبل الارسال</p>
+    </div>
 
-    &lt;!-- USDC Panel --&gt;
-    &lt;div id=&quot;usdc&quot; class=&quot;crypto-panel&quot;&gt;
-      &lt;span class=&quot;network-badge&quot;&gt;USDC&lt;/span&gt;
-      &lt;div class=&quot;qr-container&quot;&gt;
-        &lt;img src=&quot;imgs/qrcode_usdc.png&quot; alt=&quot;USDC QR&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;address-box&quot;&gt;
-        &lt;div class=&quot;address-text&quot; id=&quot;usdc-addr&quot;&gt;0xB1C993d7a2d0A178744483Ae92F4937Db1865b42&lt;/div&gt;
-        &lt;button class=&quot;copy-btn&quot; onclick=&quot;copyAddress(&#39;usdc-addr&#39;)&quot;&gt;نسخ&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;p class=&quot;hint-text&quot;&gt;تأكد من العنوان قبل الارسال&lt;/p&gt;
-    &lt;/div&gt;
+    <!-- USDC Panel -->
+    <div id="usdc" class="crypto-panel">
+      <span class="network-badge">USDC</span>
+      <div class="qr-container">
+        <img src="imgs/qrcode_usdc.png" alt="USDC QR">
+      </div>
+      <div class="address-box">
+        <div class="address-text" id="usdc-addr">0xB1C993d7a2d0A178744483Ae92F4937Db1865b42</div>
+        <button class="copy-btn" onclick="copyAddress('usdc-addr')">نسخ</button>
+      </div>
+      <p class="hint-text">تأكد من العنوان قبل الارسال</p>
+    </div>
 
-  &lt;/div&gt;
+  </div>
 
-  &lt;script&gt;
+  <script>
     // Tab Switching Logic
     function switchTab(evt, coinId) {
-      const panels = document.querySelectorAll(&#39;.crypto-panel&#39;);
-      const buttons = document.querySelectorAll(&#39;.tab-btn&#39;);
+      const panels = document.querySelectorAll('.crypto-panel');
+      const buttons = document.querySelectorAll('.tab-btn');
       
-      panels.forEach(panel =&gt; panel.classList.remove(&#39;active&#39;));
-      buttons.forEach(btn =&gt; btn.classList.remove(&#39;active&#39;));
+      panels.forEach(panel => panel.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
       
-      document.getElementById(coinId).classList.add(&#39;active&#39;);
-      evt.currentTarget.classList.add(&#39;active&#39;);
+      document.getElementById(coinId).classList.add('active');
+      evt.currentTarget.classList.add('active');
     }
 
     // Copy to Clipboard Logic
@@ -299,21 +299,21 @@
       const addressText = document.getElementById(elementId).innerText;
       const button = document.querySelector(`#${elementId} + .copy-btn`);
       
-      navigator.clipboard.writeText(addressText).then(() =&gt; {
+      navigator.clipboard.writeText(addressText).then(() => {
         const originalText = button.innerText;
-        button.innerText = &#39;Copied!&#39;;
-        button.style.backgroundColor = &#39;#28a745&#39;;
-        button.style.color = &#39;#fff&#39;;
+        button.innerText = 'Copied!';
+        button.style.backgroundColor = '#28a745';
+        button.style.color = '#fff';
         
-        setTimeout(() =&gt; {
+        setTimeout(() => {
           button.innerText = originalText;
-          button.style.backgroundColor = &#39;&#39;;
-          button.style.color = &#39;&#39;;
+          button.style.backgroundColor = '';
+          button.style.color = '';
         }, 1500);
-      }).catch(err =&gt; {
-        console.error(&#39;Failed to copy text: &#39;, err);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
       });
     }
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+  </script>
+</body>
+</html>
